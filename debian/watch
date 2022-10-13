@@ -1,0 +1,7 @@
+version=4
+# upstream commit by mistake 1.3.1 instead of 0.3.1. Fix it in uversion mangle
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+uversionmangle=s/^1.3.1$/0.3.1/,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-is-arrayish-$1.tar.gz/ \
+ https://github.com/qix-/node-is-arrayish/tags .*/archive/v?([\d\.]+).tar.gz

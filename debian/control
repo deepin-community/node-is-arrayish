@@ -1,0 +1,26 @@
+Source: node-is-arrayish
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Shanavas Muhammed Rafeek <shanavas.m2@gmail.com>
+Build-Depends: coffeescript (>= 1.9.3) <!nocheck>
+ , debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha (>= 4) <!nocheck>
+ , node-should (>= 7.0.1) <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-is-arrayish
+Vcs-Git: https://salsa.debian.org/js-team/node-is-arrayish.git
+Homepage: https://github.com/qix-/node-is-arrayish
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-is-arrayish
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Determines if an object can be used as an array
+ A Nodejs module to determine if a given object can be used as an array,
+ thus the object support indexing.
+ .
+ Node.js is an event-based server-side JavaScript engine.
